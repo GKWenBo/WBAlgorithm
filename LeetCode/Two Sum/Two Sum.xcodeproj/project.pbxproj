@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D06A8284221B943500F5322B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8283221B943500F5322B /* AppDelegate.m */; };
+		D06A8287221B943500F5322B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8286221B943500F5322B /* ViewController.m */; };
+		D06A828A221B943500F5322B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06A8288221B943500F5322B /* Main.storyboard */; };
+		D06A828C221B943700F5322B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06A828B221B943700F5322B /* Assets.xcassets */; };
+		D06A828F221B943700F5322B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06A828D221B943700F5322B /* LaunchScreen.storyboard */; };
+		D06A8292221B943700F5322B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8291221B943700F5322B /* main.m */; };
+		D06A829C221B943700F5322B /* Two_SumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A829B221B943700F5322B /* Two_SumTests.m */; };
+		D06A82A7221B943700F5322B /* Two_SumUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A82A6221B943700F5322B /* Two_SumUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D06A8298221B943700F5322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06A8277221B943500F5322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06A827E221B943500F5322B;
+			remoteInfo = "Two Sum";
+		};
+		D06A82A3221B943700F5322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06A8277221B943500F5322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06A827E221B943500F5322B;
+			remoteInfo = "Two Sum";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D06A827F221B943500F5322B /* Two Sum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Two Sum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A8282221B943500F5322B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D06A8283221B943500F5322B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D06A8285221B943500F5322B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D06A8286221B943500F5322B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D06A8289221B943500F5322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D06A828B221B943700F5322B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D06A828E221B943700F5322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D06A8290221B943700F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06A8291221B943700F5322B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D06A8297221B943700F5322B /* Two SumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Two SumTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A829B221B943700F5322B /* Two_SumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Two_SumTests.m; sourceTree = "<group>"; };
+		D06A829D221B943700F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06A82A2221B943700F5322B /* Two SumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Two SumUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A82A6221B943700F5322B /* Two_SumUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Two_SumUITests.m; sourceTree = "<group>"; };
+		D06A82A8221B943700F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D06A827C221B943500F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A8294221B943700F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A829F221B943700F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D06A8276221B943500F5322B = {
+			isa = PBXGroup;
+			children = (
+				D06A8281221B943500F5322B /* Two Sum */,
+				D06A829A221B943700F5322B /* Two SumTests */,
+				D06A82A5221B943700F5322B /* Two SumUITests */,
+				D06A8280221B943500F5322B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D06A8280221B943500F5322B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D06A827F221B943500F5322B /* Two Sum.app */,
+				D06A8297221B943700F5322B /* Two SumTests.xctest */,
+				D06A82A2221B943700F5322B /* Two SumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D06A8281221B943500F5322B /* Two Sum */ = {
+			isa = PBXGroup;
+			children = (
+				D06A8282221B943500F5322B /* AppDelegate.h */,
+				D06A8283221B943500F5322B /* AppDelegate.m */,
+				D06A8285221B943500F5322B /* ViewController.h */,
+				D06A8286221B943500F5322B /* ViewController.m */,
+				D06A8288221B943500F5322B /* Main.storyboard */,
+				D06A828B221B943700F5322B /* Assets.xcassets */,
+				D06A828D221B943700F5322B /* LaunchScreen.storyboard */,
+				D06A8290221B943700F5322B /* Info.plist */,
+				D06A8291221B943700F5322B /* main.m */,
+			);
+			path = "Two Sum";
+			sourceTree = "<group>";
+		};
+		D06A829A221B943700F5322B /* Two SumTests */ = {
+			isa = PBXGroup;
+			children = (
+				D06A829B221B943700F5322B /* Two_SumTests.m */,
+				D06A829D221B943700F5322B /* Info.plist */,
+			);
+			path = "Two SumTests";
+			sourceTree = "<group>";
+		};
+		D06A82A5221B943700F5322B /* Two SumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D06A82A6221B943700F5322B /* Two_SumUITests.m */,
+				D06A82A8221B943700F5322B /* Info.plist */,
+			);
+			path = "Two SumUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D06A827E221B943500F5322B /* Two Sum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A82AB221B943700F5322B /* Build configuration list for PBXNativeTarget "Two Sum" */;
+			buildPhases = (
+				D06A827B221B943500F5322B /* Sources */,
+				D06A827C221B943500F5322B /* Frameworks */,
+				D06A827D221B943500F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Two Sum";
+			productName = "Two Sum";
+			productReference = D06A827F221B943500F5322B /* Two Sum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D06A8296221B943700F5322B /* Two SumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A82AE221B943700F5322B /* Build configuration list for PBXNativeTarget "Two SumTests" */;
+			buildPhases = (
+				D06A8293221B943700F5322B /* Sources */,
+				D06A8294221B943700F5322B /* Frameworks */,
+				D06A8295221B943700F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06A8299221B943700F5322B /* PBXTargetDependency */,
+			);
+			name = "Two SumTests";
+			productName = "Two SumTests";
+			productReference = D06A8297221B943700F5322B /* Two SumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D06A82A1221B943700F5322B /* Two SumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A82B1221B943700F5322B /* Build configuration list for PBXNativeTarget "Two SumUITests" */;
+			buildPhases = (
+				D06A829E221B943700F5322B /* Sources */,
+				D06A829F221B943700F5322B /* Frameworks */,
+				D06A82A0221B943700F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06A82A4221B943700F5322B /* PBXTargetDependency */,
+			);
+			name = "Two SumUITests";
+			productName = "Two SumUITests";
+			productReference = D06A82A2221B943700F5322B /* Two SumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D06A8277221B943500F5322B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = wenbo;
+				TargetAttributes = {
+					D06A827E221B943500F5322B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D06A8296221B943700F5322B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D06A827E221B943500F5322B;
+					};
+					D06A82A1221B943700F5322B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D06A827E221B943500F5322B;
+					};
+				};
+			};
+			buildConfigurationList = D06A827A221B943500F5322B /* Build configuration list for PBXProject "Two Sum" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D06A8276221B943500F5322B;
+			productRefGroup = D06A8280221B943500F5322B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D06A827E221B943500F5322B /* Two Sum */,
+				D06A8296221B943700F5322B /* Two SumTests */,
+				D06A82A1221B943700F5322B /* Two SumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D06A827D221B943500F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A828F221B943700F5322B /* LaunchScreen.storyboard in Resources */,
+				D06A828C221B943700F5322B /* Assets.xcassets in Resources */,
+				D06A828A221B943500F5322B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A8295221B943700F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A82A0221B943700F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D06A827B221B943500F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A8287221B943500F5322B /* ViewController.m in Sources */,
+				D06A8292221B943700F5322B /* main.m in Sources */,
+				D06A8284221B943500F5322B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A8293221B943700F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A829C221B943700F5322B /* Two_SumTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A829E221B943700F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A82A7221B943700F5322B /* Two_SumUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D06A8299221B943700F5322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06A827E221B943500F5322B /* Two Sum */;
+			targetProxy = D06A8298221B943700F5322B /* PBXContainerItemProxy */;
+		};
+		D06A82A4221B943700F5322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06A827E221B943500F5322B /* Two Sum */;
+			targetProxy = D06A82A3221B943700F5322B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D06A8288221B943500F5322B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06A8289221B943500F5322B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D06A828D221B943700F5322B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06A828E221B943700F5322B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D06A82A9221B943700F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D06A82AA221B943700F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D06A82AC221B943700F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two Sum/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-Sum";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D06A82AD221B943700F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two Sum/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-Sum";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D06A82AF221B943700F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two SumTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-SumTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Two Sum.app/Two Sum";
+			};
+			name = Debug;
+		};
+		D06A82B0221B943700F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two SumTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-SumTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Two Sum.app/Two Sum";
+			};
+			name = Release;
+		};
+		D06A82B2221B943700F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two SumUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-SumUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Two Sum";
+			};
+			name = Debug;
+		};
+		D06A82B3221B943700F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Two SumUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Two-SumUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Two Sum";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D06A827A221B943500F5322B /* Build configuration list for PBXProject "Two Sum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A82A9221B943700F5322B /* Debug */,
+				D06A82AA221B943700F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A82AB221B943700F5322B /* Build configuration list for PBXNativeTarget "Two Sum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A82AC221B943700F5322B /* Debug */,
+				D06A82AD221B943700F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A82AE221B943700F5322B /* Build configuration list for PBXNativeTarget "Two SumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A82AF221B943700F5322B /* Debug */,
+				D06A82B0221B943700F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A82B1221B943700F5322B /* Build configuration list for PBXNativeTarget "Two SumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A82B2221B943700F5322B /* Debug */,
+				D06A82B3221B943700F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D06A8277221B943500F5322B /* Project object */;
+}

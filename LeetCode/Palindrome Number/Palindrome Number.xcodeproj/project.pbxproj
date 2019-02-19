@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D06A8300221B98BD00F5322B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A82FF221B98BD00F5322B /* AppDelegate.m */; };
+		D06A8303221B98BD00F5322B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8302221B98BD00F5322B /* ViewController.m */; };
+		D06A8306221B98BD00F5322B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06A8304221B98BD00F5322B /* Main.storyboard */; };
+		D06A8308221B98BE00F5322B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06A8307221B98BE00F5322B /* Assets.xcassets */; };
+		D06A830B221B98BE00F5322B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06A8309221B98BE00F5322B /* LaunchScreen.storyboard */; };
+		D06A830E221B98BE00F5322B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A830D221B98BE00F5322B /* main.m */; };
+		D06A8318221B98BE00F5322B /* Palindrome_NumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8317221B98BE00F5322B /* Palindrome_NumberTests.m */; };
+		D06A8323221B98BE00F5322B /* Palindrome_NumberUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A8322221B98BE00F5322B /* Palindrome_NumberUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D06A8314221B98BE00F5322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06A82F3221B98BD00F5322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06A82FA221B98BD00F5322B;
+			remoteInfo = "Palindrome Number";
+		};
+		D06A831F221B98BE00F5322B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06A82F3221B98BD00F5322B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D06A82FA221B98BD00F5322B;
+			remoteInfo = "Palindrome Number";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D06A82FB221B98BD00F5322B /* Palindrome Number.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palindrome Number.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A82FE221B98BD00F5322B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D06A82FF221B98BD00F5322B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D06A8301221B98BD00F5322B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D06A8302221B98BD00F5322B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D06A8305221B98BD00F5322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D06A8307221B98BE00F5322B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D06A830A221B98BE00F5322B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D06A830C221B98BE00F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06A830D221B98BE00F5322B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D06A8313221B98BE00F5322B /* Palindrome NumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palindrome NumberTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A8317221B98BE00F5322B /* Palindrome_NumberTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Palindrome_NumberTests.m; sourceTree = "<group>"; };
+		D06A8319221B98BE00F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06A831E221B98BE00F5322B /* Palindrome NumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palindrome NumberUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06A8322221B98BE00F5322B /* Palindrome_NumberUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Palindrome_NumberUITests.m; sourceTree = "<group>"; };
+		D06A8324221B98BE00F5322B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D06A82F8221B98BD00F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A8310221B98BE00F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A831B221B98BE00F5322B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D06A82F2221B98BD00F5322B = {
+			isa = PBXGroup;
+			children = (
+				D06A82FD221B98BD00F5322B /* Palindrome Number */,
+				D06A8316221B98BE00F5322B /* Palindrome NumberTests */,
+				D06A8321221B98BE00F5322B /* Palindrome NumberUITests */,
+				D06A82FC221B98BD00F5322B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D06A82FC221B98BD00F5322B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D06A82FB221B98BD00F5322B /* Palindrome Number.app */,
+				D06A8313221B98BE00F5322B /* Palindrome NumberTests.xctest */,
+				D06A831E221B98BE00F5322B /* Palindrome NumberUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D06A82FD221B98BD00F5322B /* Palindrome Number */ = {
+			isa = PBXGroup;
+			children = (
+				D06A82FE221B98BD00F5322B /* AppDelegate.h */,
+				D06A82FF221B98BD00F5322B /* AppDelegate.m */,
+				D06A8301221B98BD00F5322B /* ViewController.h */,
+				D06A8302221B98BD00F5322B /* ViewController.m */,
+				D06A8304221B98BD00F5322B /* Main.storyboard */,
+				D06A8307221B98BE00F5322B /* Assets.xcassets */,
+				D06A8309221B98BE00F5322B /* LaunchScreen.storyboard */,
+				D06A830C221B98BE00F5322B /* Info.plist */,
+				D06A830D221B98BE00F5322B /* main.m */,
+			);
+			path = "Palindrome Number";
+			sourceTree = "<group>";
+		};
+		D06A8316221B98BE00F5322B /* Palindrome NumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				D06A8317221B98BE00F5322B /* Palindrome_NumberTests.m */,
+				D06A8319221B98BE00F5322B /* Info.plist */,
+			);
+			path = "Palindrome NumberTests";
+			sourceTree = "<group>";
+		};
+		D06A8321221B98BE00F5322B /* Palindrome NumberUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D06A8322221B98BE00F5322B /* Palindrome_NumberUITests.m */,
+				D06A8324221B98BE00F5322B /* Info.plist */,
+			);
+			path = "Palindrome NumberUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D06A82FA221B98BD00F5322B /* Palindrome Number */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A8327221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome Number" */;
+			buildPhases = (
+				D06A82F7221B98BD00F5322B /* Sources */,
+				D06A82F8221B98BD00F5322B /* Frameworks */,
+				D06A82F9221B98BD00F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Palindrome Number";
+			productName = "Palindrome Number";
+			productReference = D06A82FB221B98BD00F5322B /* Palindrome Number.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D06A8312221B98BE00F5322B /* Palindrome NumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A832A221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome NumberTests" */;
+			buildPhases = (
+				D06A830F221B98BE00F5322B /* Sources */,
+				D06A8310221B98BE00F5322B /* Frameworks */,
+				D06A8311221B98BE00F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06A8315221B98BE00F5322B /* PBXTargetDependency */,
+			);
+			name = "Palindrome NumberTests";
+			productName = "Palindrome NumberTests";
+			productReference = D06A8313221B98BE00F5322B /* Palindrome NumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D06A831D221B98BE00F5322B /* Palindrome NumberUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06A832D221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome NumberUITests" */;
+			buildPhases = (
+				D06A831A221B98BE00F5322B /* Sources */,
+				D06A831B221B98BE00F5322B /* Frameworks */,
+				D06A831C221B98BE00F5322B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D06A8320221B98BE00F5322B /* PBXTargetDependency */,
+			);
+			name = "Palindrome NumberUITests";
+			productName = "Palindrome NumberUITests";
+			productReference = D06A831E221B98BE00F5322B /* Palindrome NumberUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D06A82F3221B98BD00F5322B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = wenbo;
+				TargetAttributes = {
+					D06A82FA221B98BD00F5322B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D06A8312221B98BE00F5322B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D06A82FA221B98BD00F5322B;
+					};
+					D06A831D221B98BE00F5322B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D06A82FA221B98BD00F5322B;
+					};
+				};
+			};
+			buildConfigurationList = D06A82F6221B98BD00F5322B /* Build configuration list for PBXProject "Palindrome Number" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D06A82F2221B98BD00F5322B;
+			productRefGroup = D06A82FC221B98BD00F5322B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D06A82FA221B98BD00F5322B /* Palindrome Number */,
+				D06A8312221B98BE00F5322B /* Palindrome NumberTests */,
+				D06A831D221B98BE00F5322B /* Palindrome NumberUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D06A82F9221B98BD00F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A830B221B98BE00F5322B /* LaunchScreen.storyboard in Resources */,
+				D06A8308221B98BE00F5322B /* Assets.xcassets in Resources */,
+				D06A8306221B98BD00F5322B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A8311221B98BE00F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A831C221B98BE00F5322B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D06A82F7221B98BD00F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A8303221B98BD00F5322B /* ViewController.m in Sources */,
+				D06A830E221B98BE00F5322B /* main.m in Sources */,
+				D06A8300221B98BD00F5322B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A830F221B98BE00F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A8318221B98BE00F5322B /* Palindrome_NumberTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D06A831A221B98BE00F5322B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06A8323221B98BE00F5322B /* Palindrome_NumberUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D06A8315221B98BE00F5322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06A82FA221B98BD00F5322B /* Palindrome Number */;
+			targetProxy = D06A8314221B98BE00F5322B /* PBXContainerItemProxy */;
+		};
+		D06A8320221B98BE00F5322B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D06A82FA221B98BD00F5322B /* Palindrome Number */;
+			targetProxy = D06A831F221B98BE00F5322B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D06A8304221B98BD00F5322B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06A8305221B98BD00F5322B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D06A8309221B98BE00F5322B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06A830A221B98BE00F5322B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D06A8325221B98BE00F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D06A8326221B98BE00F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D06A8328221B98BE00F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome Number/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-Number";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D06A8329221B98BE00F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome Number/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-Number";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D06A832B221B98BE00F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome NumberTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-NumberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palindrome Number.app/Palindrome Number";
+			};
+			name = Debug;
+		};
+		D06A832C221B98BE00F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome NumberTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-NumberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Palindrome Number.app/Palindrome Number";
+			};
+			name = Release;
+		};
+		D06A832E221B98BE00F5322B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome NumberUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-NumberUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Palindrome Number";
+			};
+			name = Debug;
+		};
+		D06A832F221B98BE00F5322B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Palindrome NumberUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Palindrome-NumberUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Palindrome Number";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D06A82F6221B98BD00F5322B /* Build configuration list for PBXProject "Palindrome Number" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A8325221B98BE00F5322B /* Debug */,
+				D06A8326221B98BE00F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A8327221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome Number" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A8328221B98BE00F5322B /* Debug */,
+				D06A8329221B98BE00F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A832A221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome NumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A832B221B98BE00F5322B /* Debug */,
+				D06A832C221B98BE00F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06A832D221B98BE00F5322B /* Build configuration list for PBXNativeTarget "Palindrome NumberUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06A832E221B98BE00F5322B /* Debug */,
+				D06A832F221B98BE00F5322B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D06A82F3221B98BD00F5322B /* Project object */;
+}
