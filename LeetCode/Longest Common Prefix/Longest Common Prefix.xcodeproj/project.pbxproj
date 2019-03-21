@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D02ADFBA22420F0300D2870E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ADFB922420F0300D2870E /* AppDelegate.m */; };
+		D02ADFBD22420F0300D2870E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ADFBC22420F0300D2870E /* ViewController.m */; };
+		D02ADFC022420F0300D2870E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02ADFBE22420F0300D2870E /* Main.storyboard */; };
+		D02ADFC222420F0500D2870E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02ADFC122420F0500D2870E /* Assets.xcassets */; };
+		D02ADFC522420F0500D2870E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02ADFC322420F0500D2870E /* LaunchScreen.storyboard */; };
+		D02ADFC822420F0500D2870E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ADFC722420F0500D2870E /* main.m */; };
+		D02ADFD222420F0500D2870E /* Longest_Common_PrefixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ADFD122420F0500D2870E /* Longest_Common_PrefixTests.m */; };
+		D02ADFDD22420F0500D2870E /* Longest_Common_PrefixUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D02ADFDC22420F0500D2870E /* Longest_Common_PrefixUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D02ADFCE22420F0500D2870E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D02ADFAD22420F0300D2870E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02ADFB422420F0300D2870E;
+			remoteInfo = "Longest Common Prefix";
+		};
+		D02ADFD922420F0500D2870E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D02ADFAD22420F0300D2870E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D02ADFB422420F0300D2870E;
+			remoteInfo = "Longest Common Prefix";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D02ADFB522420F0300D2870E /* Longest Common Prefix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Longest Common Prefix.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02ADFB822420F0300D2870E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D02ADFB922420F0300D2870E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D02ADFBB22420F0300D2870E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D02ADFBC22420F0300D2870E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D02ADFBF22420F0300D2870E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D02ADFC122420F0500D2870E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D02ADFC422420F0500D2870E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D02ADFC622420F0500D2870E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02ADFC722420F0500D2870E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D02ADFCD22420F0500D2870E /* Longest Common PrefixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Longest Common PrefixTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02ADFD122420F0500D2870E /* Longest_Common_PrefixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Longest_Common_PrefixTests.m; sourceTree = "<group>"; };
+		D02ADFD322420F0500D2870E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02ADFD822420F0500D2870E /* Longest Common PrefixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Longest Common PrefixUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D02ADFDC22420F0500D2870E /* Longest_Common_PrefixUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Longest_Common_PrefixUITests.m; sourceTree = "<group>"; };
+		D02ADFDE22420F0500D2870E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D02ADFB222420F0300D2870E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFCA22420F0500D2870E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFD522420F0500D2870E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D02ADFAC22420F0300D2870E = {
+			isa = PBXGroup;
+			children = (
+				D02ADFB722420F0300D2870E /* Longest Common Prefix */,
+				D02ADFD022420F0500D2870E /* Longest Common PrefixTests */,
+				D02ADFDB22420F0500D2870E /* Longest Common PrefixUITests */,
+				D02ADFB622420F0300D2870E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D02ADFB622420F0300D2870E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D02ADFB522420F0300D2870E /* Longest Common Prefix.app */,
+				D02ADFCD22420F0500D2870E /* Longest Common PrefixTests.xctest */,
+				D02ADFD822420F0500D2870E /* Longest Common PrefixUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D02ADFB722420F0300D2870E /* Longest Common Prefix */ = {
+			isa = PBXGroup;
+			children = (
+				D02ADFB822420F0300D2870E /* AppDelegate.h */,
+				D02ADFB922420F0300D2870E /* AppDelegate.m */,
+				D02ADFBB22420F0300D2870E /* ViewController.h */,
+				D02ADFBC22420F0300D2870E /* ViewController.m */,
+				D02ADFBE22420F0300D2870E /* Main.storyboard */,
+				D02ADFC122420F0500D2870E /* Assets.xcassets */,
+				D02ADFC322420F0500D2870E /* LaunchScreen.storyboard */,
+				D02ADFC622420F0500D2870E /* Info.plist */,
+				D02ADFC722420F0500D2870E /* main.m */,
+			);
+			path = "Longest Common Prefix";
+			sourceTree = "<group>";
+		};
+		D02ADFD022420F0500D2870E /* Longest Common PrefixTests */ = {
+			isa = PBXGroup;
+			children = (
+				D02ADFD122420F0500D2870E /* Longest_Common_PrefixTests.m */,
+				D02ADFD322420F0500D2870E /* Info.plist */,
+			);
+			path = "Longest Common PrefixTests";
+			sourceTree = "<group>";
+		};
+		D02ADFDB22420F0500D2870E /* Longest Common PrefixUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D02ADFDC22420F0500D2870E /* Longest_Common_PrefixUITests.m */,
+				D02ADFDE22420F0500D2870E /* Info.plist */,
+			);
+			path = "Longest Common PrefixUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D02ADFB422420F0300D2870E /* Longest Common Prefix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02ADFE122420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common Prefix" */;
+			buildPhases = (
+				D02ADFB122420F0300D2870E /* Sources */,
+				D02ADFB222420F0300D2870E /* Frameworks */,
+				D02ADFB322420F0300D2870E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Longest Common Prefix";
+			productName = "Longest Common Prefix";
+			productReference = D02ADFB522420F0300D2870E /* Longest Common Prefix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D02ADFCC22420F0500D2870E /* Longest Common PrefixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02ADFE422420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common PrefixTests" */;
+			buildPhases = (
+				D02ADFC922420F0500D2870E /* Sources */,
+				D02ADFCA22420F0500D2870E /* Frameworks */,
+				D02ADFCB22420F0500D2870E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02ADFCF22420F0500D2870E /* PBXTargetDependency */,
+			);
+			name = "Longest Common PrefixTests";
+			productName = "Longest Common PrefixTests";
+			productReference = D02ADFCD22420F0500D2870E /* Longest Common PrefixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D02ADFD722420F0500D2870E /* Longest Common PrefixUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D02ADFE722420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common PrefixUITests" */;
+			buildPhases = (
+				D02ADFD422420F0500D2870E /* Sources */,
+				D02ADFD522420F0500D2870E /* Frameworks */,
+				D02ADFD622420F0500D2870E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D02ADFDA22420F0500D2870E /* PBXTargetDependency */,
+			);
+			name = "Longest Common PrefixUITests";
+			productName = "Longest Common PrefixUITests";
+			productReference = D02ADFD822420F0500D2870E /* Longest Common PrefixUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D02ADFAD22420F0300D2870E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = tcsd;
+				TargetAttributes = {
+					D02ADFB422420F0300D2870E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					D02ADFCC22420F0500D2870E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D02ADFB422420F0300D2870E;
+					};
+					D02ADFD722420F0500D2870E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = D02ADFB422420F0300D2870E;
+					};
+				};
+			};
+			buildConfigurationList = D02ADFB022420F0300D2870E /* Build configuration list for PBXProject "Longest Common Prefix" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D02ADFAC22420F0300D2870E;
+			productRefGroup = D02ADFB622420F0300D2870E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D02ADFB422420F0300D2870E /* Longest Common Prefix */,
+				D02ADFCC22420F0500D2870E /* Longest Common PrefixTests */,
+				D02ADFD722420F0500D2870E /* Longest Common PrefixUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D02ADFB322420F0300D2870E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02ADFC522420F0500D2870E /* LaunchScreen.storyboard in Resources */,
+				D02ADFC222420F0500D2870E /* Assets.xcassets in Resources */,
+				D02ADFC022420F0300D2870E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFCB22420F0500D2870E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFD622420F0500D2870E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D02ADFB122420F0300D2870E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02ADFBD22420F0300D2870E /* ViewController.m in Sources */,
+				D02ADFC822420F0500D2870E /* main.m in Sources */,
+				D02ADFBA22420F0300D2870E /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFC922420F0500D2870E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02ADFD222420F0500D2870E /* Longest_Common_PrefixTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D02ADFD422420F0500D2870E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02ADFDD22420F0500D2870E /* Longest_Common_PrefixUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D02ADFCF22420F0500D2870E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02ADFB422420F0300D2870E /* Longest Common Prefix */;
+			targetProxy = D02ADFCE22420F0500D2870E /* PBXContainerItemProxy */;
+		};
+		D02ADFDA22420F0500D2870E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D02ADFB422420F0300D2870E /* Longest Common Prefix */;
+			targetProxy = D02ADFD922420F0500D2870E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D02ADFBE22420F0300D2870E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02ADFBF22420F0300D2870E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D02ADFC322420F0500D2870E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D02ADFC422420F0500D2870E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D02ADFDF22420F0500D2870E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D02ADFE022420F0500D2870E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D02ADFE222420F0500D2870E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common Prefix/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-Prefix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D02ADFE322420F0500D2870E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common Prefix/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-Prefix";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D02ADFE522420F0500D2870E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common PrefixTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-PrefixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Longest Common Prefix.app/Longest Common Prefix";
+			};
+			name = Debug;
+		};
+		D02ADFE622420F0500D2870E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common PrefixTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-PrefixTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Longest Common Prefix.app/Longest Common Prefix";
+			};
+			name = Release;
+		};
+		D02ADFE822420F0500D2870E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common PrefixUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-PrefixUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Longest Common Prefix";
+			};
+			name = Debug;
+		};
+		D02ADFE922420F0500D2870E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Longest Common PrefixUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.com.wb.Longest-Common-PrefixUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Longest Common Prefix";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D02ADFB022420F0300D2870E /* Build configuration list for PBXProject "Longest Common Prefix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02ADFDF22420F0500D2870E /* Debug */,
+				D02ADFE022420F0500D2870E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02ADFE122420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common Prefix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02ADFE222420F0500D2870E /* Debug */,
+				D02ADFE322420F0500D2870E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02ADFE422420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common PrefixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02ADFE522420F0500D2870E /* Debug */,
+				D02ADFE622420F0500D2870E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02ADFE722420F0500D2870E /* Build configuration list for PBXNativeTarget "Longest Common PrefixUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D02ADFE822420F0500D2870E /* Debug */,
+				D02ADFE922420F0500D2870E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D02ADFAD22420F0300D2870E /* Project object */;
+}
