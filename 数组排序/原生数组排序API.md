@@ -1,16 +1,6 @@
-//
-//  main.m
-//  SortingForArray
-//
-//  Created by ChenMan on 2017/12/20.
-//  Copyright © 2017年 ChenMan. All rights reserved.
-//
+- \- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask;
 
-#import <Foundation/Foundation.h>
-#import <stdio.h>
-#import <objc/runtime.h>
-
-
+```objective-c
 void handlePrintingOfProperties(void){
     unsigned int count;// 记录属性个数
     objc_property_t *properties = class_copyPropertyList([NSString class], &count);
@@ -37,7 +27,9 @@ void handlePrintingOfProperties(void){
     //C语言中,用完copy,create的东西之后,最好释放
     free(properties);
 }
+```
 
+```objective-c
 void handlePrintingOfIvars(void){
     unsigned int count;// 记录属性个数
     Ivar *properties = class_copyIvarList([NSURL class], &count);
@@ -64,7 +56,11 @@ void handlePrintingOfIvars(void){
     //C语言中,用完copy,create的东西之后,最好释放
     free(properties);
 }
+```
 
+- \- (NSComparisonResult)compare:(NSString *)string options:(NSStringCompareOptions)mask range:(NSRange)rangeOfReceiverToCompare locale:(nullable id)locale; 
+
+```objective-c
 void handleSortingForStrArray(void){
 //    NSArray *stringsArray = [NSArray arrayWithObjects:
 //                             @"string 10",
@@ -104,7 +100,11 @@ void handleSortingForStrArray(void){
     NSLog(@"finderSortArray: %@", finderSortArray);
     
 }
+```
 
+- NSComparator
+
+```objective-c
 void handleSortingForIntArray(void){
     NSArray *originalArray = @[@(00),@0,@00,@01,@10,@21,@12,@11,@22];
     //block比较方法，数组中可以是NSInteger，NSString（需要转换）
@@ -121,7 +121,9 @@ void handleSortingForIntArray(void){
     NSArray *resultArray = [originalArray sortedArrayUsingComparator:finderSort];
     NSLog(@"Int数组排序结果：%@",resultArray);
 }
+```
 
+```objective-c
 void handleSortingForIntStrArray(void){
     NSArray *originalArray = @[@"00",@"0",@"00",@"01",@"10",@"21",@"12",@"11",@"22"];
     //block比较方法，数组中可以是NSInteger，NSString（需要转换）
@@ -139,18 +141,5 @@ void handleSortingForIntStrArray(void){
     NSLog(@"第一种排序结果：%@",resultArray);
 }
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-        // insert code here...
-//        NSLog(@"Results of handleSortingForStrArray()**********************");
-//        handleSortingForStrArray();
-//        NSLog(@"Results of handleSortingForIntArray()**********************");
-//        handleSortingForIntStrArray();
-        NSLog(@"handlePrintingOfProperties()**********************");
-        handlePrintingOfProperties();
-//        NSLog(@"handlePrintingOfIvars()**********************");
-//        handlePrintingOfIvars();
-    }
-    return 0;
-}
+```
 
