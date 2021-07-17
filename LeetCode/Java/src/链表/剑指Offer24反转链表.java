@@ -1,7 +1,5 @@
 package 链表;
 
-import jdk.javadoc.internal.doclets.formats.html.markup.Head;
-
 public class 剑指Offer24反转链表 {
 
 	class Solution {

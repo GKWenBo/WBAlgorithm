@@ -1,3 +1,7 @@
+//: [Previous](@previous)
+
+import Foundation
+
 import UIKit
 
 func fib(_ n: Int) -> Int {
@@ -18,3 +22,6 @@ func fib(_ n: Int) -> Int {
 }
 
 print(fib(45))
+
+
+//: [Next](@next)
