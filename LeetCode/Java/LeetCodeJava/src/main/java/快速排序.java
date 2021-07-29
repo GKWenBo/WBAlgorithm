@@ -8,7 +8,7 @@ public class 快速排序 {
         return quickSort(arr, 0, arr.length - 1);
     }
 
-    private static   int[] quickSort(int[] arr, int left, int right) {
+    private static int[] quickSort(int[] arr, int left, int right) {
         if (left < right) {
             int partitionIndex = partition(arr, left, right);
             quickSort(arr, left, partitionIndex - 1);

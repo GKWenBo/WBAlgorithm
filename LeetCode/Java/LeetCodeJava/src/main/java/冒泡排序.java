@@ -17,9 +17,26 @@ public class 冒泡排序 {
         }
     }
 
+    /*排序优化*/
+    static void bubbleSort1(int[] a, int n) {
+        for (int end = n - 1; end > 0; end--) {
+            int sortedIndex = 1;
+            for (int begin = 1; begin <= end; begin++) {
+                if (a[begin] < a[begin -1]) {
+                    int temp = a[begin];
+                    a[begin] = a[begin - 1];
+                    a[begin - 1] = temp;
+                    sortedIndex = begin;
+                }
+            }
+            end = sortedIndex;
+        }
+    }
+
+
     public static void main(String[] args) {
-        int[] arr = {6, 5, 3, 8};
-        bubbleSort(arr, 4);
+        int[] arr = {6, 5, 3, 8, 1};
+        bubbleSort1(arr, 5);
         System.out.println(Arrays.toString(arr));
     }
 }
