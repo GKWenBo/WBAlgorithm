@@ -1,3 +1,5 @@
+package com.wb.sort;
+
 import java.util.Arrays;
 
 public class 插入排序 {
@@ -23,6 +25,5 @@ public class 插入排序 {
     public static void main(String[] args) {
         int[] arr = {6, 5, 3, 8};
         System.out.println(Arrays.toString(selectionSort(arr)));
-
     }
 }

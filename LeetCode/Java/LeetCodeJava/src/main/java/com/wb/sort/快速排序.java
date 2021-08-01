@@ -1,3 +1,5 @@
+package com.wb.sort;
+
 import java.util.Arrays;
 
 public class 快速排序 {
@@ -38,7 +40,7 @@ public class 快速排序 {
     }
 
     public static void main(String[] args) {
-        int[] arr = {6, 5, 3, 8, 1};
+        int[] arr = {6, 5, 3, 8, 1, 3, 4,2, 78};
         System.out.println(Arrays.toString(sort(arr)));
     }
 }

@@ -1,3 +1,5 @@
+package com.wb.sort;
+
 import java.util.Arrays;
 
 public class 冒泡排序 {
