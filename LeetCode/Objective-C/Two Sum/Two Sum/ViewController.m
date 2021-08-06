@@ -18,10 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-        NSArray *arr = @[@2, @7, @11, @15];
-        NSArray *result = [self twoSum:arr
-                                target:18];
-        NSLog(@"%@",result);
+//        NSArray *arr = @[@2, @7, @11, @15];
+//        NSArray *result = [self twoSum:arr
+//                                target:18];
+//        NSLog(@"%@",result);
 }
 
 /*
@@ -31,17 +31,17 @@
  return [0, 1].
  */
 //Approach 1
-- (NSArray *)twoSum:(NSArray *)array
-             target:(int)target {
-    for (NSInteger i = 0; i < array.count; i ++) {
-        for (NSInteger j = i + 1; j < array.count; j++) {
-            if ([array[j] intValue] == target - [array[i] intValue]) {
-                return @[@(i),@(j)];
-            }
-        }
-    }
-    return nil;
-}
+//- (NSArray *)twoSum:(NSArray *)array
+//             target:(int)target {
+//    for (NSInteger i = 0; i < array.count; i ++) {
+//        for (NSInteger j = i + 1; j < array.count; j++) {
+//            if ([array[j] intValue] == target - [array[i] intValue]) {
+//                return @[@(i),@(j)];
+//            }
+//        }
+//    }
+//    return nil;
+//}
 
 //Approach 2
 //- (NSArray *)twoSum:(NSArray *)array
