@@ -7,5 +7,6 @@
         <page name='剑指 Offer 10- I. 斐波那契数列'/>
         <page name='剑指 Offer 25. 合并两个排序的链表'/>
         <page name='232. 用栈实现队列'/>
+        <page name='26. 删除有序数组中的重复项'/>
     </pages>
 </playground>
