@@ -3,5 +3,9 @@
     <pages>
         <page name='剑指 Offer 18. 删除链表的节点'/>
         <page name='21. 合并两个有序链表'/>
+        <page name='344. 反转字符串'/>
+        <page name='541. 反转字符串 II'/>
+        <page name='225. 用队列实现栈'/>
+        <page name='15. 三数之和'/>
     </pages>
 </playground>
