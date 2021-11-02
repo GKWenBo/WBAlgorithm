@@ -5,5 +5,9 @@
         <page name='21. 合并两个有序链表'/>
         <page name='141. 环形链表'/>
         <page name='206. 反转链表'/>
+        <page name='SinglyLinkedList'/>
+        <page name='237. 删除链表中的节点'/>
+        <page name='876. 链表的中间结点'/>
+        <page name='剑指 Offer II 021. 删除链表的倒数第 n 个结点'/>
     </pages>
 </playground>
