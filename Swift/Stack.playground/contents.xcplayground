@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'/>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='225. 用队列实现栈'/>
+        <page name='20. 有效的括号'/>
+        <page name='232. 用栈实现队列'/>
+        <page name='剑指 Offer 09. 用两个栈实现队列'/>
+    </pages>
+</playground>
