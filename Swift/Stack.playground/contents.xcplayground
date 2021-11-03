@@ -5,5 +5,7 @@
         <page name='20. 有效的括号'/>
         <page name='232. 用栈实现队列'/>
         <page name='剑指 Offer 09. 用两个栈实现队列'/>
+        <page name='编程模拟实现一个浏览器的前进、后退功能'/>
+        <page name='用链表实现栈'/>
     </pages>
 </playground>

@@ -27,5 +27,35 @@
 
 import Foundation
 
+class CQueue {
+    
+    var inStack: [Int]
+    var outStack: [Int]
+    
+    init() {
+        inStack = []
+        outStack = []
+    }
+    
+    func appendTail(_ value: Int) {
+        inStack.append(value)
+    }
+    
+    func deleteHead() -> Int {
+        if outStack.isEmpty {
+            while !inStack.isEmpty {
+                outStack.append(inStack.popLast()!)
+            }
+        }
+        return outStack.popLast() ?? -1
+    }
+}
+
+let queue = CQueue()
+queue.appendTail(1)
+queue.appendTail(2)
+queue.appendTail(3)
+
+let head = queue.deleteHead()
 
 //: [Next](@next)
