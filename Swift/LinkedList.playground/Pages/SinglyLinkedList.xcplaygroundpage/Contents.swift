@@ -13,8 +13,8 @@ class Node<T> {
     }
 }
 
+/// 单链表
 class SinglyLinkedList<Element: Equatable> {
-    
     /// 哨兵节点
     private var dummy = Node<Element>()
     

@@ -52,7 +52,6 @@ class Solution {
         return newHead
     }
     
-    
     /// 递归翻转
     /// - Parameter head: 头结点
     /// - Returns: 新头节点
