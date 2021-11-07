@@ -3,5 +3,10 @@
     <pages>
         <page name='88. 合并两个有序数组'/>
         <page name='LRUCache'/>
+        <page name='BubbleSort'/>
+        <page name='InsertionSort'/>
+        <page name='SelectionSort'/>
+        <page name='MergeSort'/>
+        <page name='QuickSort'/>
     </pages>
 </playground>
