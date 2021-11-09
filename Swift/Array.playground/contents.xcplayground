@@ -8,5 +8,6 @@
         <page name='SelectionSort'/>
         <page name='MergeSort'/>
         <page name='QuickSort'/>
+        <page name='剑指 Offer II 076. 数组中的第 k 大的数字'/>
     </pages>
 </playground>

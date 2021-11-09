@@ -51,7 +51,7 @@ func partition(array: inout Array<Int>, left: Int, right: Int) -> Int {
 }
 
 /// test
-var array = [2, 3, 5, 1, 6, 0]
+var array = [2, 3, 5, 1, 6, 0, -1]
 quickSort(array: &array)
 print(array)
 
