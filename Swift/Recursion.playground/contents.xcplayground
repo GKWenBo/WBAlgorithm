@@ -3,5 +3,6 @@
     <pages>
         <page name='509. 斐波那契数'/>
         <page name='n的阶乘'/>
+        <page name='46. 全排列'/>
     </pages>
 </playground>
