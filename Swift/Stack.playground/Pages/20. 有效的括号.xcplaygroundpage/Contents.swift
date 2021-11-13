@@ -41,23 +41,20 @@
 import Foundation
 
 class Solution {
-    static var map: [Character: Character] {
-        return ["(": ")",
-                "[": "]",
-                "{": "}"]
-    }
-    
     func isValid(_ s: String) -> Bool {
+        let dic: [Character: Character] = ["(": ")",
+                                           "[": "]",
+                                           "{": "}"]
         var stack: [Character] = []
         for c in s {
-            if Self.map.keys.contains(c) {
+            if dic.keys.contains(c) {
                 stack.append(c)
             } else {
                 if stack.isEmpty {
                     return false
                 }
                 
-                if c != Self.map[stack.popLast()!] {
+                if c != dic[stack.popLast()!] {
                     return false
                 }
             }
@@ -65,7 +62,6 @@ class Solution {
         return stack.isEmpty
     }
 }
-
 
 let s = Solution()
 print(s.isValid("([)]"))

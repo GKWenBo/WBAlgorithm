@@ -9,5 +9,8 @@
         <page name='MergeSort'/>
         <page name='QuickSort'/>
         <page name='剑指 Offer II 076. 数组中的第 k 大的数字'/>
+        <page name='1. 两数之和'/>
+        <page name='15. 三数之和'/>
+        <page name='无序数组中位数查找'/>
     </pages>
 </playground>

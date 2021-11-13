@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
     <pages>
-        <page name='剑指 Offer 18. 删除链表的节点'/>
-        <page name='21. 合并两个有序链表'/>
-        <page name='344. 反转字符串'/>
-        <page name='541. 反转字符串 II'/>
-        <page name='225. 用队列实现栈'/>
-        <page name='15. 三数之和'/>
-        <page name='141. 环形链表'/>
-        <page name='剑指 Offer 50. 第一个只出现一次的字符'/>
+        <page name='9. 回文数'/>
+        <page name='7. 整数反转'/>
     </pages>
 </playground>
