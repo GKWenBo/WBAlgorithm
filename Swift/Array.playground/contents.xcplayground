@@ -12,5 +12,8 @@
         <page name='1. 两数之和'/>
         <page name='15. 三数之和'/>
         <page name='无序数组中位数查找'/>
+        <page name='希尔排序'/>
+        <page name='计数排序'/>
+        <page name='桶排序'/>
     </pages>
 </playground>
