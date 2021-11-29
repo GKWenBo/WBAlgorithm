@@ -9,8 +9,8 @@
  示例 1：
  输入：s = "abcdefg", k = 2
  输出："bacdfeg"
+ 
  示例 2：
-
  输入：s = "abcd", k = 2
  输出："bacd"
   
