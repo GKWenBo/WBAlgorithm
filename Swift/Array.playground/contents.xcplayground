@@ -16,5 +16,6 @@
         <page name='计数排序'/>
         <page name='桶排序'/>
         <page name='977. 有序数组的平方'/>
+        <page name='4. 寻找两个正序数组的中位数'/>
     </pages>
 </playground>
