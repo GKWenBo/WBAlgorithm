@@ -3,6 +3,8 @@ package com.wb;
 import mj.printer.BinaryTreeInfo;
 
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class WBBinarySearchTree<E> implements BinaryTreeInfo {
     private int size;
@@ -73,6 +75,164 @@ public class WBBinarySearchTree<E> implements BinaryTreeInfo {
     }
 
     /**
+     * 前序遍历
+     */
+    public void preOrderTraversal() {
+        preOrderTraversal(root);
+    }
+
+    private void preOrderTraversal(Node<E> root) {
+        if (root == null) return;
+        System.out.println(root.element);
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    public void preOrderTraversal1(Visitor<E> visitor) {
+        if (visitor == null) return;
+        preOrderTraversal1(root, visitor);
+    }
+
+    private void preOrderTraversal1(Node<E> root, Visitor<E> visitor) {
+        if (root == null || visitor.stop) return;
+        visitor.stop = visitor.visit(root.element);
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    /**
+     * 中序遍历
+     */
+    public void inOrderTraversal() {
+        inOrderTraversal(root);
+    }
+
+    private void inOrderTraversal(Node<E> root) {
+        if (root == null) return;
+        inOrderTraversal(root.left);
+        System.out.println(root.element);
+        inOrderTraversal(root.right);
+    }
+
+    public void inOrderTraversal1(Visitor<E> visitor) {
+        if (visitor == null) return;
+        inOrderTraversal1(root, visitor);
+    }
+
+    private void inOrderTraversal1(Node<E> root, Visitor<E> visitor) {
+        if (root == null || visitor.stop) return;
+        inOrderTraversal(root.left);
+        if (visitor.stop) return;
+        visitor.stop = visitor.visit(root.element);
+        inOrderTraversal(root.right);
+    }
+
+    /**
+     * 后序遍历
+     */
+    public void postOrderTraversal() {
+        postOrderTraversal(root);
+    }
+
+    private void postOrderTraversal(Node<E> root) {
+        if (root == null) return;
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.println(root.element);
+    }
+
+    public void postOrderTraversal1(Visitor<E> visitor) {
+        if (visitor == null) return;
+        postOrderTraversal1(root, visitor);
+    }
+
+    private void postOrderTraversal1(Node<E> root, Visitor<E> visitor) {
+        if (root == null || visitor.stop) return;
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        if (visitor.stop) return;
+        visitor.stop = visitor.visit(root.element);
+    }
+
+    public void levelTraversal(Node<E> root) {
+        if (root == null) return;
+
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            System.out.println(node.element);
+
+            if (root.left != null) {
+                queue.offer(node.left);
+            }
+
+            if (root.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    public void levelTraversal1(Node<E> root, Visitor<E> visitor) {
+        if (root == null || visitor == null) return;
+
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            if (visitor.visit(node.element)) return;
+
+            if (root.left != null) {
+                queue.offer(node.left);
+            }
+
+            if (root.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    /**
+     * 树的高度
+     * @return
+     */
+    public int height() {
+        if (root == null) return 0;
+        // 树的高度
+        int height = 0;
+        int levelSize = 1;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            levelSize--;
+
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+
+            if (levelSize == 0) {
+                levelSize = queue.size();
+                height++;
+            }
+        }
+        return height;
+    }
+
+    public int height1() {
+        return height1(root);
+    }
+
+    public int height1(Node<E> root) {
+        if (root == null) return 0;
+        return 1 + Math.max(height1(root.left), height1(root.right));
+    }
+
+    /**
     私有方法
      */
     // 检查插入值不为空
@@ -117,7 +277,21 @@ public class WBBinarySearchTree<E> implements BinaryTreeInfo {
         return myNode.element + "_p(" + parentString + ")";
     }
 
-    private static  class Node<E> {
+    public static abstract class Visitor<E> {
+        boolean stop;
+        /**
+         * 返回true就停止遍历
+         * @param element
+         * @return
+         */
+        public abstract boolean visit(E element);
+    }
+
+    /**
+     * 节点类
+     * @param <E>
+     */
+    private static class Node<E> {
         E element;
         Node<E> left;
         Node<E> right;
