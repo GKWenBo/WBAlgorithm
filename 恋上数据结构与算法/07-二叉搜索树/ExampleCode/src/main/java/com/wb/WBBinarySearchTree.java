@@ -233,6 +233,60 @@ public class WBBinarySearchTree<E> implements BinaryTreeInfo {
     }
 
     /**
+     * 
+     * @return
+     */
+    public boolean isComplete() {
+        if (root == null) return false;
+        boolean leaf = false;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            if (leaf && !node.isLeaf()) return false;
+
+            if (node.left != null && node.right != null) {
+                queue.offer(node.left);
+                queue.offer(node.right);
+            } else if (node.left == null && node.right != null) {
+                return false;
+            } else  {
+                leaf = true;
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+            }
+        }
+        return true;
+    }
+
+    public boolean isComplete1() {
+        if (root == null) return false;
+        boolean leaf = false;
+        Queue<Node<E>> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node<E> node = queue.poll();
+            if (leaf && !node.isLeaf()) return false;
+
+            if (node.left != null) {
+                queue.offer(node.left);
+            } else if (node.right != null) {
+                return false;
+            }
+
+            if (node.right != null) {
+                queue.offer(node.right);
+            } else  {
+                leaf = true;
+            }
+        }
+        return true;
+    }
+
+    /**
     私有方法
      */
     // 检查插入值不为空
