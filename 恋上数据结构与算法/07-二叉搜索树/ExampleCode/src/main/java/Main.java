@@ -7,7 +7,8 @@ public class Main {
 //        test2();
 //        test3();
 //        test4();
-        test5();
+//        test5();
+        test6();
     }
 
     static void test1() {
@@ -66,6 +67,20 @@ public class Main {
         BinaryTrees.println(bst);
         System.out.println(bst.isComplete());
         System.out.println(bst.isComplete1());
+    }
+
+    static void test6() {
+        Integer array[] = new Integer[] {7, 4, 9, 2, 5, 8, 3, 12, 1};
+        WBBinarySearchTree bst = new WBBinarySearchTree();
+        for (int i = 0; i < array.length; i++) {
+            bst.add(array[i]);
+        }
+
+        BinaryTrees.println(bst);
+        bst.remove(1);
+        bst.remove(3);
+        BinaryTrees.println(bst);
+        System.out.println(bst.contains(7));
     }
 
 }
