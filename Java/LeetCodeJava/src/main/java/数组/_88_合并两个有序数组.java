@@ -1,6 +1,11 @@
+package 数组;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
+/**
+ * https://leetcode-cn.com/problems/merge-sorted-array/
+ */
 public class _88_合并两个有序数组 {
     // 方法一：直接合并后排序
 //    public void merge(int[] nums1, int m, int[] nums2, int n) {

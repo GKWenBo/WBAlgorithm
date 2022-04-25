@@ -3,6 +3,9 @@ package 栈;
 import java.util.HashMap;
 import java.util.Stack;
 
+/**
+ * https://leetcode-cn.com/problems/valid-parentheses/
+ */
 public class _20_有效的括号 {
 	private static HashMap<Character, Character> map = new HashMap<>();
 	static {
