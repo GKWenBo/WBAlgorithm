@@ -2,9 +2,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-/**
- * https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/
- */
 public class _50_第一个只出现一次的字符 {
     /// 方法1 哈希表
 //    public char firstUniqChar(String s) {

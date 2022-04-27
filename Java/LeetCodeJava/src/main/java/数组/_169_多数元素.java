@@ -1,5 +1,6 @@
 package 数组;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,34 @@ public class _169_多数元素 {
                 }
             }
             return majorityEntry.getKey();
+        }
+
+        /**
+         * 排序解法
+         * @param nums
+         * @return
+         */
+        public int majorityElement1(int[] nums) {
+            Arrays.sort(nums);
+            return nums[nums.length / 2];
+        }
+
+        /**
+         * 投票法
+         * @param nums
+         * @return
+         */
+        public int majorityElement2(int[] nums) {
+            int count = 0;
+            Integer candidate = null;
+            for (int num:nums
+                 ) {
+                if (count == 0) {
+                    candidate = num;
+                }
+                count += (candidate == num) ? 1 : -1;
+            }
+            return candidate;
         }
 
         /**
