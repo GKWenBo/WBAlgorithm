@@ -50,7 +50,7 @@ class Solution {
 
 /// test
 var solution = Solution()
-solution.fib(10)
-solution.fib1(10)
+solution.fib(2)
+//solution.fib1(10)
 
 //: [Next](@next)

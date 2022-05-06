@@ -278,7 +278,6 @@ public class WBBinarySearchTree<E> implements BinaryTreeInfo {
             if (node.right != null) {
                 queue.offer(node.right);
             }
-
             if (levelSize == 0) {
                 levelSize = queue.size();
                 height++;

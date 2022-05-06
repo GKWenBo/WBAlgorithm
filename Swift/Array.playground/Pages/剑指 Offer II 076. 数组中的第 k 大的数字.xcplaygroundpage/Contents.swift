@@ -63,6 +63,6 @@ class Solution {
 var solution = Solution()
 //var array = [3, 2, 1, 5, 6, 4]
 var array = [3,2,3,1,2,4,5,5,6]
-let item = solution.findKthLargest([], 10)
+let item = solution.findKthLargest([], 0)
 print(item)
 //: [Next](@next)

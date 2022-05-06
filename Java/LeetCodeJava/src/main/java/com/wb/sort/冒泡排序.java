@@ -3,6 +3,7 @@ package com.wb.sort;
 import java.util.Arrays;
 
 public class 冒泡排序 {
+
     static void bubbleSort(int[] a, int n) {
         if (n <= 1) return;
         for (int i = 0; i < n; i++) {
