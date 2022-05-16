@@ -17,5 +17,6 @@
         <page name='桶排序'/>
         <page name='977. 有序数组的平方'/>
         <page name='4. 寻找两个正序数组的中位数'/>
+        <page name='349. 两个数组的交集'/>
     </pages>
 </playground>
