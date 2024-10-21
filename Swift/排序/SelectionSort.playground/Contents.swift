@@ -1,6 +1,28 @@
-//: [Previous](@previous)
-
 import Foundation
+
+/// 选择排序 O(n²)
+/// - Parameter array: 要排序的数组
+func selectionSort(_ array: inout [Int]) {
+    guard array.count > 1 else {
+        return
+    }
+    for i in 0..<array.count {
+        var minIndex = i
+        for j in (i + 1)..<array.count {
+            minIndex = array[j] < array[minIndex] ? j : minIndex
+        }
+        if i == minIndex {
+            continue
+        }
+        swap(array: &array, i: i, j: minIndex)
+    }
+}
+
+func swap(array: inout [Int], i: Int, j: Int) {
+    let temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+}
 
 /*
  > - 首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置
@@ -37,7 +59,10 @@ func selectionSort(array: inout Array<Int>) {
 
 /// test
 var array = [2, 3, 5, 1, 6, 0]
-selectionSort(array: &array)
+selectionSort(&array)
 print(array)
 
-//: [Next](@next)
+// test
+var arr = [3, 5, 1, 6, 4, 2, 1]
+selectionSort(array: &arr)
+print(arr)

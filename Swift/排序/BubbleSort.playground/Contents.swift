@@ -1,5 +1,3 @@
-//: [Previous](@previous)
-
 import Foundation
 
 /*
@@ -25,9 +23,28 @@ func bubbleSort(array: inout Array<Int>) {
     }
 }
 
-/// test
-var array = [2, 3, 5, 1]
-bubbleSort(array: &array)
-print(array)
+func bubbleSort(_ array: inout [Int]) {
+    guard array.count > 1 else {
+        return
+    }
+    
+    var i = array.count - 1
+    while i > 0 {
+        for j in 0..<i {
+            if array[j] > array[j + 1] {
+                swap(array: &array, i: j, j: j + 1)
+            }
+        }
+        i -= 1
+    }
+}
 
-//: [Next](@next)
+func swap(array: inout [Int], i: Int, j: Int) {
+    let temp = array[i]
+    array[i] = array[j]
+    array[j] = temp
+}
+
+var arr = [3, 5, 1, 6, 4, 2, 1, -2]
+bubbleSort(array: &arr)
+print(arr)
