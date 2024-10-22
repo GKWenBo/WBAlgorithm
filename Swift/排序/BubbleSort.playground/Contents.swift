@@ -45,6 +45,17 @@ func swap(array: inout [Int], i: Int, j: Int) {
     array[j] = temp
 }
 
-var arr = [3, 5, 1, 6, 4, 2, 1, -2]
+/// 交换数组i，j位置元素 note：要交换的位置内存地址不能相同
+/// - Parameters:
+///   - array: 数组
+///   - i: 元素下标
+///   - j: 元素下标
+func swap2(array: inout [Int], i: Int, j: Int) {
+    array[i] = array[i] ^ array[j]
+    array[j] = array[i] ^ array[j]
+    array[i] = array[i] ^ array[j]
+}
+
+var arr = [0, 3, 5, 1, 1, 3]
 bubbleSort(array: &arr)
 print(arr)
