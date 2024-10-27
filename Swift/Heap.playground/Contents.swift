@@ -1,5 +1,8 @@
-import UIKit
+import Foundation
 
+/*
+ 实现最大堆数据结构
+ */
 struct Heap: CustomStringConvertible {
     var description: String {
         return array.description
@@ -28,7 +31,7 @@ struct Heap: CustomStringConvertible {
         count += 1
         array[count] = data
         var i = count
-        while i / 2 > 0 && array[i] > array[i / 2] {
+        while i / 2 > 0 && array[i] > array[i / 2] { // 子节点比父节点大，则交换父子节点
             array.swapAt(i, i / 2)
             i /= 2
         }

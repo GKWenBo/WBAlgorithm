@@ -1,6 +1,5 @@
-//: [Previous](@previous)
-
 import Foundation
+
 /*
  > - 不断地将当前序列平均分割成2个子序列
  >
@@ -78,5 +77,3 @@ func merge(array: inout Array<Int>, p: Int, q: Int, r: Int) {
 var array = [2, 3, 5, 1, 6, 0]
 mergeSort(array: &array)
 print(array)
-
-//: [Next](@next)
