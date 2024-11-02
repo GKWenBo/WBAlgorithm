@@ -2,28 +2,29 @@ import Foundation
 
 /*
  实现最大堆数据结构
+ i位置左孩子：2 * i + 1，右孩子：2 * i + 2，父：(i - 1) / 2
  */
-struct Heap: CustomStringConvertible {
+struct MaxHeap<T: Comparable>: CustomStringConvertible {
     var description: String {
         return array.description
     }
     
     /// 数组，下标从1开始
-    private var array: [Int]
+    private var array: [T]
     /// 堆容量
     private let size: Int
     /// 已存储数据
     private var count: Int
     
     init(_ capacity: Int) {
-        array = Array(repeating: 0, count: capacity + 1)
+        array = [T](repeating: 0 as! T, count: capacity + 1)
         size = capacity
         count = 0
     }
     
     /// 往堆中插入数据
     /// - Parameter data: 要插入的数据
-    mutating func insert(_ data: Int) {
+    mutating func insert(_ data: T) {
         guard count < size else {
             return
         }
@@ -83,7 +84,7 @@ struct Heap: CustomStringConvertible {
             i -= 1
         }
     }
-    
+     
     static func heapify(array: inout [Int], n: Int, i: Int) {
         var i = i
         while true {
@@ -118,5 +119,5 @@ struct Heap: CustomStringConvertible {
 
 // test build heap
 var arr = [0, 1, 2, 3]
-Heap.buildHeap(array: &arr, n: 3)
+MaxHeap<Int>.buildHeap(array: &arr, n: 3)
 print(arr)
