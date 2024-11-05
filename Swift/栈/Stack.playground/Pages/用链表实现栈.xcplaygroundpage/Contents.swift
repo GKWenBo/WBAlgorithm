@@ -6,7 +6,7 @@ class Node<T: Equatable> {
     var value: T?
     var next: Node?
     
-    init(){}
+    init() {}
     
     init(value: T) {
         self.value = value
