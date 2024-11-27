@@ -8,7 +8,7 @@ func smallSum(_ arr: inout [Int]) -> Int {
     guard arr.count > 1 else {
         return 0
     }
-    return process(&arr, L: 0, R: arr.count - 1)
+    return process(&arr, L: 0, R: arr.count - 1) 
 }
 
 func process(_ arr: inout [Int], L: Int, R: Int) -> Int {
