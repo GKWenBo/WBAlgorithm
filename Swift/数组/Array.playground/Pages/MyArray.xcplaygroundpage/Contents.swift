@@ -2,82 +2,106 @@
 
 import Foundation
 
-struct MyArray {
+struct MyArray<Element: Equatable>: CustomStringConvertible {
+    private var data: [Element]
+    private var size: Int
+    private var capacity: Int
     
-    static let NOTFOUND = -1
-    
-    public var data: Array<Int>
-    private var count: Int
-    private var n: Int
-    
-    init(_ capacity: Int) {
-        self.data = Array(repeating: 0, count: capacity)
-        self.n = capacity
-        self.count = 0
+    init(capacity: Int, defaultElement: Element) {
+        data = [Element](repeating: defaultElement, count: capacity)
+        self.capacity = capacity
+        size = 0
     }
     
-    /// 根据下标查找元素
-    /// - Parameter index: 下标
-    /// - Returns: 找到的元素
-    func find(_ index: Int) -> Int {
-        guard index > 0 || index < count else {
-            return Self.NOTFOUND
+    var count: Int {
+        return size
+    }
+    
+    var isEmpty: Bool {
+        return size == 0
+    }
+    
+    mutating func add(value: Element) -> Bool {
+        guard size < capacity else {
+            return false
+        }
+        data[size] = value
+        size += 1
+        return true
+    }
+    
+    /// 数组中插入元素
+    /// - Parameters:
+    ///   - value: 要插入的元素
+    ///   - index: 插入的下标
+    /// - Returns: 成功/失败
+    mutating func insert(value: Element , at index: Int) -> Bool {
+        // index 必须在 [0, count)
+        guard index >= 0, index < size, size < capacity else {
+            return false
+        }
+        
+        // count - 1 ~ index
+        for i in (index ... size - 1).reversed() {
+            data[i + 1] = data[i]
+        }
+        
+        data[index] = value
+        size += 1
+        return true
+    }
+    
+    /// 根据小标获取元素
+    func get(index: Int) -> Element? {
+        /// index 必须在 [0, size)
+        guard index >= 0 && index < size else {
+            return nil
         }
         return data[index]
     }
     
-    mutating func insert(index: Int, value: Int) -> Bool {
-        if count == n {
-            print("没有可插入的位置")
-            return false
+    /// 是否包含某个元素
+    func contains(e: Element) -> Bool {
+        for i in 0..<size {
+            if data[i] == e {
+                return true
+            }
         }
-        if index < 0 || index > count {
-            print("插入位置不合法")
-            return false
-        }
-        
-        var i = count
-        while i > index {
-            data[i] = data[i - 1]
-            i -= 1
-        }
-        data[index] = value
-        count += 1
-        return true
+        return false
     }
     
-    /// 根据索引删除数组元素
-    /// - Parameter index: 删除元素下标
-    /// - Returns: 成功或者失败
-    mutating func delete(_ index: Int) -> Bool {
-        guard index >= 0 || index < count else {
+    mutating func delete(at index: Int) -> Bool {
+        guard index >= 0, index < size else {
             return false
         }
-        
-        for i in (index + 1)..<count {
-            data[i - 1] = data[i]
+        for i in index..<size - 1 {
+            data[i] = data[i + 1]
         }
-        count -= 1
+        size -= 1
         return true
     }
     
     func printAll() {
-        for value in data {
-            print("\(value)" + " ")
-        }
+        print(data)
+    }
+    
+    var description: String {
+        return data.description
     }
 }
 
+//: [Next](@next)
 
 // Test
-var array = MyArray(5)
-array.insert(index: 0, value: 3)
-array.insert(index: 0, value: 5)
-array.insert(index: 1, value: 4)
-array.insert(index: 3, value: 9)
-array.printAll()
-array.delete(1)
-print("============")
+var array = MyArray<String>(capacity: 2, defaultElement: "")
+array.add(value: "1")
+array.insert(value: "2", at: 0)
+
 array.printAll()
 
-//: [Next](@next)
+array.get(index: 0)
+
+array.delete(at: 0)
+
+array.printAll()
+

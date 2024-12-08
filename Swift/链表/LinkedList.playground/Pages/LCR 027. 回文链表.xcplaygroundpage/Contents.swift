@@ -26,7 +26,7 @@ public class ListNode {
 class Solution {
     func isPalindrome(_ head: ListNode?) -> Bool {
         /// 链表为空，直接返回
-        guard head != nil else {
+        guard head != nil, head?.next != nil else {
             return true
         }
         var fast = head, slow = head
@@ -82,15 +82,15 @@ class Solution {
 class Solution1 {
     func isPalindrome(_ head: ListNode?) -> Bool {
         /// 链表为空，直接返回
-        guard head != nil else {
+        guard head != nil, head?.next != nil else {
             return true
         }
         
         /// 将链表节点值压入栈中
         var stack: [Int] = []
         var temp = head
-        while temp != nil {
-            stack.append(temp?.val ?? 0)
+        while let node = temp { /// 节点不为空
+            stack.append(node.val)
             temp = temp?.next
         }
         
@@ -110,27 +110,31 @@ class Solution1 {
  */
 class Solution2 {
     func isPalindrome(_ head: ListNode?) -> Bool {
-        guard head != nil else {
+        guard head != nil, head?.next != nil else {
             return true
         }
         
+        /// 用于存储链表右半部分
         var stack: [Int] = []
-        var temp = head
-        var length = 0
-        while temp != nil {
-            stack.append(temp?.val ?? 0)
-            temp = temp?.next
-            length += 1
+        var cur = head, right = head?.next
+        /// 通过快慢指针找到中间节点
+        while let _ = cur?.next, let _ = right?.next?.next {
+            right = right?.next
+            cur = cur?.next?.next
         }
         
-        length = length >> 1
+        /// 存储链表右半部分
+        while let r = right {
+            stack.append(r.val)
+            right = right?.next
+        }
+        
         var head = head
-        while length >= 0 {
+        while !stack.isEmpty {
             if head?.val != stack.popLast() {
                 return false
             }
             head = head?.next
-            length -= 1
         }
         return true
     }
