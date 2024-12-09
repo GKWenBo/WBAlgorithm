@@ -103,6 +103,7 @@ class Solution2 {
         while cur != nil  {
             next = cur?.next?.next
             curCopy = cur?.next
+            // 克隆节点random节点设置
             curCopy?.random = cur?.random != nil ? cur?.random?.next : nil
             cur = next
         }
@@ -110,10 +111,15 @@ class Solution2 {
         // 分割复制节点
         var res: Node? = head.next
         cur = head
+        // 1 -> 1' -> 2 -> 2'
         while cur != nil {
+            // 2
             next = cur?.next?.next
+            // 1'
             curCopy = cur?.next
+            // 2
             cur?.next = next
+            // 1' -> 2'
             curCopy?.next = next != nil ? next?.next : nil
             cur = next
         }

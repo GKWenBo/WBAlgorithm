@@ -14,16 +14,7 @@
 
 import Foundation
 
-public class ListNode : Hashable {
-    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val == rhs.val && lhs.next == rhs.next
-    }
-    
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(val)
-        hasher.combine(next)
-    }
-    
+public class ListNode {
     public var val: Int
     public var next: ListNode?
     public init(_ val: Int) {
@@ -32,36 +23,62 @@ public class ListNode : Hashable {
     }
 }
 
-// 方法一：哈希表
-//func hasCycle(_ head: ListNode?) -> Bool {
-//    var head = head
-//    var set: Set<ListNode> = []
-//    while head != nil {
-//        let (inserted, _) = set.insert(head!)
-//        if !inserted {
-//            return true
-//        }
-//        head = head?.next
-//    }
-//    return false
-//}
-
-// 快慢指针
-func hasCycle(_ head: ListNode?) -> Bool {
-    if head == nil || head?.next == nil {
-        return false
+extension ListNode: Hashable, Equatable {
+    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs === rhs
     }
     
-    var slow = head
-    var fast = head?.next
-    while slow != nil && fast != nil {
-        if slow === fast {
-            return true
-        }
-        slow = slow?.next
-        fast = fast?.next?.next
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(val)
+        hasher.combine(ObjectIdentifier(self))
     }
-    return false
 }
+
+// 哈希表
+class Solution {
+    func hasCycle(_ head: ListNode?) -> Bool {
+        var head = head
+        var set: Set<ListNode> = []
+        while head != nil {
+            let (inserted, _) = set.insert(head!)
+            if !inserted {
+                return true
+            }
+            head = head?.next
+        }
+        return false
+    }
+}
+
+// 快慢指针
+class Solution1 {
+    func hasCycle(_ head: ListNode?) -> Bool {
+        if head == nil || head?.next == nil {
+            return false
+        }
+        
+        var slow = head
+        var fast = head?.next
+        while slow != nil && fast != nil {
+            if slow === fast {
+                return true
+            }
+            slow = slow?.next
+            fast = fast?.next?.next
+        }
+        return false
+    }
+}
+
+
+// Test
+let node1 = ListNode(1)
+let node2 = ListNode(2)
+let node3 = ListNode(3)
+
+node1.next = node2
+node2.next = node3
+node3.next = node2
+Solution1().hasCycle(node1)
 
 //: [Next](@next)
