@@ -68,6 +68,137 @@ class Solution1 {
     }
 }
 
+
+/// 找到链表第一个入环节点，如果无环，返回null
+/// - Parameter head: 链表头节点
+/// - Returns: 第一个入环节点
+func getLoopNode(_ head: ListNode?) -> ListNode? {
+    guard head != nil, head?.next != nil, head?.next?.next != nil else {
+        return nil
+    }
+    var slow = head
+    var fast = head?.next?.next
+    while slow != fast {
+        if fast?.next == nil || fast?.next?.next == nil {
+            return nil
+        }
+        slow = slow?.next
+        fast = fast?.next?.next
+    }
+    
+    /// 快指针重置为头节点
+    fast = head
+    while slow != fast {
+        slow = slow?.next
+        fast = fast?.next
+    }
+    return slow
+}
+
+func noLoop(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+    guard headA != nil, headB != nil else {
+        return nil
+    }
+    var curA = headA
+    var curB = headB
+    var n = 0
+    while curA?.next != nil {
+        n += 1
+        curA = curA?.next
+    }
+    
+    while curB?.next != nil {
+        n -= 1
+        curB = curB?.next
+    }
+    
+    /// 尾结点不相等，说明链表未相交
+    if curA != curB {
+        return nil
+    }
+    
+    /// 链表谁长谁变为curA
+    curA = n > 0 ? headA : headB
+    curB = curA == headA ? headB : headA
+    
+    n = abs(n)
+    while n != 0 {
+        n -= 1
+        curA = curA?.next
+    }
+    
+    while curA != curB {
+        curA = curA?.next
+        curB = curB?.next
+    }
+    return curA
+}
+
+/// 求两个链表都有环的第一个相交节点
+/// - Parameters:
+///   - headA: 第一个链表头结点
+///   - loopA: 第一个链表入环节点
+///   - headB: 第二个链表头结点
+///   - loopB: 第二个链表入环节点
+/// - Returns: 相交节点
+func bothLoop(_ headA: ListNode?, loopA: ListNode?, headB: ListNode?, loopB: ListNode?) -> ListNode? {
+    var curA: ListNode? = nil
+    var curB: ListNode? = nil
+    if loopA == loopB {
+        curA = headA
+        curB = headB
+        var n = 0
+        while curA != loopA {
+            n += 1
+            curA = curA?.next
+        }
+        while curB != loopB {
+            n -= 1
+            curB = curB?.next
+        }
+        
+        curA = n > 0 ? headA : headB
+        curB = curA == headA ? headB : headA
+        n = abs(n)
+        while n != 0 {
+            n -= 1
+            curA = curA?.next
+        }
+        
+        while curA != curB {
+            curA = curA?.next
+            curB = curB?.next
+        }
+        return curA
+    } else {
+        curA = loopA?.next
+        while curA != loopA {
+            if curA == loopB {
+                return loopA
+            }
+            curA = curA?.next
+        }
+        return nil
+    }
+}
+
+/// 求两个链表相交节点
+func getIntersectNode(_ headA: ListNode?, _ headB: ListNode?) -> ListNode? {
+    guard headA != nil, headB != nil else {
+        return nil
+    }
+    /// 获取入环节点
+    let loopA = getLoopNode(headA)
+    let loopB = getLoopNode(headB)
+    if loopA == nil && loopB == nil {
+        return noLoop(headA, headB)
+    }
+    if loopA != nil && loopB != nil {
+        return bothLoop(headA, loopA: loopA, headB: headB, loopB: loopB)
+    }
+    return nil
+}
+
 // Test
 let node1 = ListNode(1)
 let node2 = ListNode(2)
@@ -91,3 +222,5 @@ node6.next = node3
 node3.next = node8
 
 let result = Solution().getIntersectionNode(node1, node5)
+
+getIntersectNode(node1, node5)
