@@ -40,19 +40,19 @@ class Solution {
         if head == nil || head?.next == nil {
             return head
         }
-        
-        var head = head
-        
-        var newHead: ListNode? = nil
-        while head != nil {
-            let temp = head?.next
-            head?.next = newHead
-            newHead = head
-            head = temp
+        var cur = head
+        var pre: ListNode? = nil
+        while cur != nil {
+            let next = cur?.next
+            cur?.next = pre
+            pre = cur
+            cur = next
         }
-        return newHead
+        return pre
     }
-    
+}
+
+class Solution1 {
     /// 递归翻转
     /// - Parameter head: 头结点
     /// - Returns: 新头节点

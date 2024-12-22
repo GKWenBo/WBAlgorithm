@@ -54,11 +54,13 @@ class Solution {
             pos += 1
         }
         
+        /// 找到要删除节点的前一个节点
         while fast != nil {
             fast = fast?.next
             slow = slow?.next
         }
         
+        /// 删除倒数第n个节点
         slow?.next = slow?.next?.next
         
         return dummy.next

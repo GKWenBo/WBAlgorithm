@@ -30,6 +30,7 @@ struct LinkedListLRUCache<Element: Equatable>: LRUCache, CustomStringConvertible
         self.head = Node()
     }
     
+    /// 添加元素
     mutating func add(value: Element) {
         let preNode = findPreNode(value: value)
         
