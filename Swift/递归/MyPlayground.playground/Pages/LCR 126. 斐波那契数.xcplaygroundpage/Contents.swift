@@ -1,5 +1,7 @@
 //: [Previous](@previous)
 
+import Foundation
+
 /*
  写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）。斐波那契数列的定义如下：
 
@@ -33,6 +35,7 @@ class Solution {
         return fib(n - 2) + fib(n - 1)
     }
     
+    /// 通过迭代实现
     func fib1(_ n: Int) -> Int {
         guard n > 1 else { return n }
         
@@ -51,6 +54,5 @@ class Solution {
 /// test
 var solution = Solution()
 solution.fib(2)
-//solution.fib1(10)
 
 //: [Next](@next)

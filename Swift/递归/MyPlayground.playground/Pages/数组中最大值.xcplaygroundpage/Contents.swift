@@ -1,5 +1,7 @@
 import Foundation
 
+import Foundation
+
 func getMax(_ arr: [Int]) -> Int {
     return process(arr, L: 0, R: arr.count - 1)
 }
