@@ -34,15 +34,17 @@ class Solution {
         }
         return fib(n - 2) + fib(n - 1)
     }
-    
-    /// 通过迭代实现
-    func fib1(_ n: Int) -> Int {
+}
+
+
+/// 通过迭代实现
+class Solution1 {
+    func fib(_ n: Int) -> Int {
         guard n > 1 else { return n }
         
-        let constant = 1000000007;
-        var first = 0;
-        var second = 1;
-        for _ in 0..<n - 1 {
+        let constant = 1000000007
+        var first = 0, second = 1
+        for _ in 0..<n-1 {
             let sum = first + second
             first = second % constant
             second = sum % constant
@@ -53,6 +55,10 @@ class Solution {
 
 /// test
 var solution = Solution()
+solution.fib(1)
 solution.fib(2)
+
+let solution1 = Solution1()
+solution1.fib(3)
 
 //: [Next](@next)
