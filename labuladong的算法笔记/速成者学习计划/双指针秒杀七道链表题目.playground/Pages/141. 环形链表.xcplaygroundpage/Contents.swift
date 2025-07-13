@@ -56,6 +56,9 @@ public class ListNode {
 
 class Solution {
     
+    /// 判断单链表是否有环（双指针解法）
+    /// - Parameter head: 链表头结点
+    /// - Returns: true/false
     func hasCycle(_ head: ListNode?) -> Bool {
         var fast = head
         var slow = head
@@ -63,6 +66,7 @@ class Solution {
             fast = fast?.next?.next
             slow = slow?.next
             
+            // 快慢指针相遇，说明有环
             if fast === slow {
                 return true
             }
