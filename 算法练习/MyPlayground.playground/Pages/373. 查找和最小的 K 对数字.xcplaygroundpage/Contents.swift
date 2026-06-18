@@ -2,14 +2,35 @@
 
 import Foundation
 
-/// 单链表节点
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init() { self.val = 0; self.next = nil; }
-    public init(_ val: Int) { self.val = val; self.next = nil; }
-    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
-}
+/*
+ 给定两个以 非递减顺序排列 的整数数组 nums1 和 nums2 , 以及一个整数 k 。
+
+ 定义一对值 (u,v)，其中第一个元素来自 nums1，第二个元素来自 nums2 。
+
+ 请找到和最小的 k 个数对 (u1,v1),  (u2,v2)  ...  (uk,vk) 。
+
+ 示例 1:
+
+ 输入: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+ 输出: [1,2],[1,4],[1,6]
+ 解释: 返回序列中的前 3 对数：
+      [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]
+ 示例 2:
+
+ 输入: nums1 = [1,1,2], nums2 = [1,2,3], k = 2
+ 输出: [1,1],[1,1]
+ 解释: 返回序列中的前 2 对数：
+      [1,1],[1,1],[1,2],[2,1],[1,2],[2,2],[1,3],[1,3],[2,3]
+ 提示:
+
+ 1 <= nums1.length, nums2.length <= 105
+ -109 <= nums1[i], nums2[i] <= 109
+ nums1 和 nums2 均为 升序排列
+ 1 <= k <= 104
+ k <= nums1.length * nums2.length
+ 
+ LeetCode: https://leetcode.cn/problems/find-k-pairs-with-smallest-sums/description/
+ */
 
 //
 //  PriorityQueue.swift
@@ -195,64 +216,128 @@ extension PriorityQueue where Element: Comparable {
     }
 }
 
-extension ListNode: Comparable {
-    public static func < (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val < rhs.val
-    }
-    
-    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val == rhs.val
-    }
-}
-
-/*
- 使用优先级队列方式
- */
+/// 算法思路（最小堆 + 懒加载扩展）：
+///
+/// 核心观察：nums1 和 nums2 均已升序排列。
+/// 对于 nums1[i]，最优的搭档一定从 nums2[0] 开始，
+/// 且每次取出 (nums1[i], nums2[j]) 后，下一个候选是 (nums1[i], nums2[j+1])。
+///
+/// 步骤：
+/// 1. 将所有 (nums1[i], nums2[0], 0) 入堆，共 nums1.count 个初始候选。
+///    堆中每个元素存 [nums1值, nums2值, nums2当前索引]，按元素和排最小堆。
+/// 2. 循环弹出堆顶（当前和最小的数对），加入结果；
+///    同时将同一行的下一列候选 (nums1[i], nums2[j+1]) 入堆，实现懒加载。
+/// 3. 重复直到取满 k 对或堆空为止。
+///
+/// 时间复杂度：O((m + k) log m)，m = nums1.count
+/// 空间复杂度：O(m)（堆的大小最多为 m）
 class Solution {
-    func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
-        /// 处理边界情况
-        guard !lists.isEmpty else { return nil }
-        /// 创建虚拟头结点
-        var dumpy = ListNode(-1)
-        var current: ListNode? = dumpy
-        
-        /// 初始化最小堆优先级队列
-        var pq = PriorityQueue<ListNode>(sort: <)
-        /// 将所有链表头节点入堆
-        for head in lists {
-            if let head {
-                pq.enqueue(head)
-            }
+    func kSmallestPairs(_ nums1: [Int], _ nums2: [Int], _ k: Int) -> [[Int]] {
+        // 最小堆：按数对之和升序排列
+        // 每个元素格式：[nums1值, nums2值, nums2的索引]
+        var pq = PriorityQueue<[Int]> { a, b in
+            (a[0] + a[1]) < (b[0] + b[1])
         }
-        
-        /// 不断取出最小节点并处理
-        while !pq.isEmpty {
-            let node = pq.dequeue()
-            current?.next = node
-            current = current?.next
-            
-            if let nextNode = node?.next {
-                pq.enqueue(nextNode)
-            }
+
+        // 初始化：每个 nums1[i] 配上 nums2[0] 作为起始候选
+        for i in 0..<nums1.count {
+            pq.enqueue([nums1[i], nums2[0], 0])
         }
-        
-        return dumpy.next
+
+        var res: [[Int]] = []
+
+        // 取出堆顶（当前最小和数对），并将该行下一列候选入堆
+        // 用 res.count < k 控制恰好取 k 对（原代码 k > 0 但未递减，是 bug）
+        while !pq.isEmpty && res.count < k {
+            guard let cur = pq.dequeue() else {
+                break
+            }
+                        
+            let num0 = cur[0]       // 来自 nums1 的值
+            let num1 = cur[1]       // 来自 nums2 的值
+            let nextJ = cur[2] + 1  // nums2 的下一个索引
+
+            // 将同一个 nums1[i] 与 nums2 下一个元素组成的候选入堆
+            if nextJ < nums2.count {
+                pq.enqueue([num0, nums2[nextJ], nextJ])
+            }
+
+            res.append([num0, num1])
+        }
+        return res
     }
 }
 
-// 创建测试链表
-let list1 = ListNode(1, ListNode(4, ListNode(5)))
-let list2 = ListNode(1, ListNode(3, ListNode(4)))
-let list3 = ListNode(2, ListNode(6))
+// MARK: - 测试
 
-// 合并操作
 let solution = Solution()
-var merged = solution.mergeKLists([list1, list2, list3])
 
-// 打印结果：1→1→2→3→4→4→5→6
-while let node = merged {
-    print(node.val, terminator: "→")
-    merged = node.next
+/// 辅助：将二维数组转成字符串，便于打印
+func pairsDesc(_ pairs: [[Int]]) -> String {
+    pairs.map { "[\($0[0]),\($0[1])]" }.joined(separator: ", ")
 }
+
+/// 辅助：对数对列表按升序规范化，用于不依赖输出顺序的比较
+func sortedPairs(_ pairs: [[Int]]) -> [[Int]] {
+    pairs.sorted { lhs, rhs in
+        lhs[0] != rhs[0] ? lhs[0] < rhs[0] : lhs[1] < rhs[1]
+    }
+}
+
+/// 辅助：验证结果（对顺序不敏感，只比较排序后是否相等）
+func assertEqual(_ result: [[Int]], _ expected: [[Int]], testName: String) {
+    let sortedResult   = sortedPairs(result)
+    let sortedExpected = sortedPairs(expected)
+    if sortedResult == sortedExpected {
+        print("✅ \(testName) 通过 → \(pairsDesc(result))")
+    } else {
+        print("❌ \(testName) 失败")
+        print("   期望: \(pairsDesc(sortedExpected))")
+        print("   实际: \(pairsDesc(sortedResult))")
+    }
+}
+
+// 示例 1：基础验证
+assertEqual(
+    solution.kSmallestPairs([1, 7, 11], [2, 4, 6], 3),
+    [[1,2],[1,4],[1,6]],
+    testName: "示例1 - 基础用例"
+)
+
+// 示例 2：重复元素
+assertEqual(
+    solution.kSmallestPairs([1, 1, 2], [1, 2, 3], 2),
+    [[1,1],[1,1]],
+    testName: "示例2 - 重复元素"
+)
+
+// 边界：k = 1，只取最小的一对
+assertEqual(
+    solution.kSmallestPairs([1, 2, 3], [4, 5, 6], 1),
+    [[1,4]],
+    testName: "边界 - k=1"
+)
+
+// 边界：nums2 只有一个元素
+assertEqual(
+    solution.kSmallestPairs([1, 2, 3], [1], 3),
+    [[1,1],[2,1],[3,1]],
+    testName: "边界 - nums2 只有一个元素"
+)
+
+// 边界：负数元素
+// 按和排序：(-5,-2)=-7, (-3,-2)=-5, (-5,1)=-4, (-3,1)=-2
+assertEqual(
+    solution.kSmallestPairs([-5, -3, 0], [-2, 1, 4], 4),
+    [[-5,-2],[-3,-2],[-5,1],[-3,1]],
+    testName: "边界 - 含负数"
+)
+
+// 边界：k 等于所有数对的总数
+assertEqual(
+    solution.kSmallestPairs([1, 2], [3, 4], 4),
+    [[1,3],[1,4],[2,3],[2,4]],
+    testName: "边界 - k 等于总数对数"
+)
 
 //: [Next](@next)

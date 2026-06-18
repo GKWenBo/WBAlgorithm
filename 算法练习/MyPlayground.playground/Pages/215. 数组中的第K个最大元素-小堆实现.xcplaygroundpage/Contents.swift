@@ -2,14 +2,55 @@
 
 import Foundation
 
-/// 单链表节点
-public class ListNode {
-    public var val: Int
-    public var next: ListNode?
-    public init() { self.val = 0; self.next = nil; }
-    public init(_ val: Int) { self.val = val; self.next = nil; }
-    public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
+/*
+ 给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。
+
+ 请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+
+ 你必须设计并实现时间复杂度为 O(n) 的算法解决此问题。
+
+
+
+ 示例 1:
+
+ 输入: [3,2,1,5,6,4], k = 2
+ 输出: 5
+ 示例 2:
+
+ 输入: [3,2,3,1,2,4,5,5,6], k = 4
+ 输出: 4
+
+
+ 提示：
+
+ 1 <= k <= nums.length <= 105
+ -104 <= nums[i] <= 104
+
+ LeetCode: https://leetcode.cn/problems/kth-largest-element-in-an-array/description/
+
+ 算法思路：快速选择（QuickSelect）
+ - 第 k 大元素等价于升序排列后索引为 n-k 的元素
+ - 每次随机选取 pivot 进行分区，分区后 pivot 落在其最终排序位置
+ - 若 pivot 索引恰好等于 target，直接返回；否则只递归目标所在的一侧
+ - 平均时间复杂度 O(n)，最坏 O(n²)（随机化 pivot 可极大降低最坏情况概率）
+ */
+
+class Solution {
+    func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+        var priorityQuue = PriorityQueue<Int>(sort: < )
+        
+        for num in nums {
+            priorityQuue.enqueue(num)
+            
+            if priorityQuue.count > k {
+                priorityQuue.dequeue()
+            }
+        }
+        
+        return priorityQuue.peek!
+    }
 }
+
 
 //
 //  PriorityQueue.swift
@@ -195,64 +236,45 @@ extension PriorityQueue where Element: Comparable {
     }
 }
 
-extension ListNode: Comparable {
-    public static func < (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val < rhs.val
-    }
-    
-    public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
-        return lhs.val == rhs.val
-    }
-}
+// MARK: - 测试
 
-/*
- 使用优先级队列方式
- */
-class Solution {
-    func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
-        /// 处理边界情况
-        guard !lists.isEmpty else { return nil }
-        /// 创建虚拟头结点
-        var dumpy = ListNode(-1)
-        var current: ListNode? = dumpy
-        
-        /// 初始化最小堆优先级队列
-        var pq = PriorityQueue<ListNode>(sort: <)
-        /// 将所有链表头节点入堆
-        for head in lists {
-            if let head {
-                pq.enqueue(head)
-            }
-        }
-        
-        /// 不断取出最小节点并处理
-        while !pq.isEmpty {
-            let node = pq.dequeue()
-            current?.next = node
-            current = current?.next
-            
-            if let nextNode = node?.next {
-                pq.enqueue(nextNode)
-            }
-        }
-        
-        return dumpy.next
-    }
-}
-
-// 创建测试链表
-let list1 = ListNode(1, ListNode(4, ListNode(5)))
-let list2 = ListNode(1, ListNode(3, ListNode(4)))
-let list3 = ListNode(2, ListNode(6))
-
-// 合并操作
 let solution = Solution()
-var merged = solution.mergeKLists([list1, list2, list3])
 
-// 打印结果：1→1→2→3→4→4→5→6
-while let node = merged {
-    print(node.val, terminator: "→")
-    merged = node.next
+// 辅助：断言并打印结果
+func assertEqual(_ result: Int, _ expected: Int, _ testName: String) {
+    if result == expected {
+        print("✅ \(testName): \(result)")
+    } else {
+        print("❌ \(testName): 期望 \(expected)，实际 \(result)")
+    }
 }
+
+// 题目示例
+assertEqual(solution.findKthLargest([3, 2, 1, 5, 6, 4], 2), 5, "示例1 - 基本用例")
+assertEqual(solution.findKthLargest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4), 4, "示例2 - 含重复元素")
+
+// 边界：单元素数组
+assertEqual(solution.findKthLargest([1], 1), 1, "单元素数组")
+
+// 边界：k=1（最大值）
+assertEqual(solution.findKthLargest([7, 3, 5, 1, 9], 1), 9, "k=1 取最大值")
+
+// 边界：k=n（最小值）
+assertEqual(solution.findKthLargest([7, 3, 5, 1, 9], 5), 1, "k=n 取最小值")
+
+// 全部相同元素
+assertEqual(solution.findKthLargest([4, 4, 4, 4], 2), 4, "全相同元素")
+
+// 含负数
+assertEqual(solution.findKthLargest([-1, -2, -3, -4, -5], 2), -2, "全负数数组")
+
+// 正负混合
+assertEqual(solution.findKthLargest([3, -1, 0, 2, -5], 3), 0, "正负混合")
+
+// 已升序排列
+assertEqual(solution.findKthLargest([1, 2, 3, 4, 5], 2), 4, "已升序排列")
+
+// 已降序排列
+assertEqual(solution.findKthLargest([5, 4, 3, 2, 1], 3), 3, "已降序排列")
 
 //: [Next](@next)
