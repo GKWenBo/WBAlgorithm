@@ -80,7 +80,7 @@ func equal(_ a: [[Int]], _ b: [[Int]]) -> Bool {
 }
 
 /// 辅助：打印测试结果
-func check(_ desc: String, input: [[Int]], expected: [[Int]]) {
+@MainActor func check(_ desc: String, input: [[Int]], expected: [[Int]]) {
     let result = s.merge(input)
     let pass = equal(result, expected)
     print("[\(pass ? "PASS" : "FAIL")] \(desc)")
