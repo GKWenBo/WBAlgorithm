@@ -45,7 +45,7 @@ import Foundation
 // 将它们归入同一组。时间 O(n·k)，空间 O(n·k)，n 为字符串数量，k 为最大长度。
 class Solution {
     func groupAnagrams(_ strs: [String]) -> [[String]] {
-        var map: [String: [String]] = [:]
+        var map: [[UInt8]: [String]] = [:]
         for str in strs {
             // 以字符频次编码为 key，把同组异位词聚合到同一数组
             let key = encode(str)
@@ -55,13 +55,13 @@ class Solution {
     }
 
     // 将字符串编码为长度 26 的频次数组（字节序列），保证字母异位词产生相同 key
-    private func encode(_ str: String) -> String {
+    private func encode(_ str: String) -> [UInt8] {
         var count = Array(repeating: UInt8(0), count: 26)
-        let aValue = Character("a").asciiValue!
+        let aValue = UInt8(ascii: "a")
         for c in str.utf8 {
             count[Int(c - aValue)] += 1
         }
-        return String(decoding: count, as: UTF8.self)
+        return count
     }
 }
 

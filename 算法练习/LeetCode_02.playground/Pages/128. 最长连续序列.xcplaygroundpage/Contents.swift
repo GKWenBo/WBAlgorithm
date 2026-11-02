@@ -35,24 +35,28 @@ import Foundation
 
 class Solution {
     func longestConsecutive(_ nums: [Int]) -> Int {
-        // 用 HashMap 存储所有数字，key 去重，支持 O(1) 查找，规避 Set 哈希碰撞风险
-        var map: [Int: Bool] = [:]
+        // 去重 + O(1) 查找；预分配容量避免扩容rehash
+        var set = Set<Int>(minimumCapacity: nums.count)
         for num in nums {
-            map[num] = true
+            set.insert(num)
         }
+        
+        guard !set.isEmpty else { return 0 }
+        
+        // 保存集合
         var res = 0
 
-        // 遍历 map.keys 而非原数组，天然跳过重复元素
-        for num in map.keys {
+        // 遍历去重后的集合
+        for num in set {
             // 只从序列起点开始扩展：若 num-1 存在，说明 num 不是起点，跳过
-            if map[num - 1] == true {
+            if num != Int.min, set.contains(num - 1) {
                 continue
             }
 
             // 从起点向右连续延伸，统计该序列长度
             var curNum = num
             var curLen = 1
-            while map[curNum + 1] == true {
+            while curNum != Int.max, set.contains(curNum + 1) {
                 curLen += 1
                 curNum += 1
             }
@@ -89,6 +93,12 @@ assert(solution.longestConsecutive([-3, -2, -1, 0]) == 4, "Test 7 failed")
 
 // 不相邻的多段序列，最长为 [1,2,3]，期望 3
 assert(solution.longestConsecutive([1, 2, 3, 10, 20]) == 3, "Test 8 failed")
+
+// Int.min 边界：num - 1 不得溢出，期望 2
+assert(solution.longestConsecutive([Int.min, Int.min + 1, 5]) == 2, "Test 9 failed")
+
+// Int.max 边界：序列尾部正好落在 Int.max，curNum + 1 不得溢出，期望 4
+assert(solution.longestConsecutive([Int.max - 3, Int.max - 2, Int.max - 1, Int.max]) == 4, "Test 10 failed")
 
 print("All tests passed!")
 
